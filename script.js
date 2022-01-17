@@ -8,6 +8,7 @@ function spin() {
   var span = document.getElementsByClassName("close")[0];
   let deg = 0;
   let c = 0;
+  var audio = new Audio("wheelsound.wav");
 
   function gimmick(el) {
     var exists = document.getElementById("gimmick");
@@ -85,6 +86,7 @@ function spin() {
     startButton.style.pointerEvents = "none";
     // Calculate a new rotation between 5000 and 10 000
     deg = Math.floor(5000 + 4.5 * 5000);
+    audio.play();
     // Set the transition on the wheel
     wheel.style.transition = "all 5s ease-out";
     // Rotate the wheel
