@@ -122,12 +122,14 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 
 .container-logo {
   display: flex;
   justify-content: center;
   margin-bottom: 12px;
+  z-index: 9999;
 }
 
 .main-image {
@@ -135,4 +137,5 @@ a {
   justify-content: center;
   margin-top: -16px;
   height: 420px;
+  z-index: 9999;
 }
