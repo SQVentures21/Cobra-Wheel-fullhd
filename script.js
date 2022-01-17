@@ -26,7 +26,7 @@ function spin() {
     canvas.id = "gimmick";
 
     var coin = new Image();
-    coin.src = "coin.png";
+    coin.src = "coin-animation.png";
     // 440 wide, 40 high, 10 states
     coin.onload = function () {
       element.appendChild(canvas);
@@ -58,7 +58,7 @@ function spin() {
         var s = coins[i].s;
         var state = coins[i].state;
         coins[i].state = state > 9 ? 0 : state + 0.1;
-        coins[i].dy += 0.3;
+        coins[i].dy += 0.01;
         coins[i].y += coins[i].dy;
 
         ctx.drawImage(
