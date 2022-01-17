@@ -9,6 +9,7 @@ function spin() {
   let deg = 0;
   let c = 0;
   var audio = new Audio("wheelsound.wav");
+  var audio1 = new Audio("wheelsound.wav");
 
   function gimmick(el) {
     var exists = document.getElementById("gimmick");
@@ -108,6 +109,7 @@ function spin() {
   spin_again.addEventListener("click", () => {
     document.getElementById("gimmick").style.display = "none";
     modal1.style.display = "none";
+    audio1.play();
     // Disable button during spin
     startButton.style.pointerEvents = "none";
     // Calculate a new rotation between 5000 and 10 000
@@ -146,13 +148,6 @@ function spin() {
     // Set the real rotation instantly without animation
     wheel.style.transform = `rotate(${actualDeg}deg)`;
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal1.style.display = "none";
-    };
-
-    // startButton.onclick = function () {
-    //   modal.style.display = "block";
-    // };
   });
 }
 
