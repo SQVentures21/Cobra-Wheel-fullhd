@@ -135,7 +135,6 @@ a {
 .main-image {
   display: flex;
   justify-content: center;
-  margin-top: -16px;
   height: 420px;
   z-index: 9999;
 }
